@@ -104,7 +104,9 @@ docker-compose up -d
 <hr>
 
 
+## Server Log
 
+<center><img src="./docs/sample-server-log.png"></center>
 
 
 ## License
