@@ -17,7 +17,7 @@ docker-compose up -d
 ## API  
 * **Description:** Gets a value stored before
 * **URL**
-  http://localhost:3000/records/{key}
+  https://yemeksepeti-case.herokuapp.com/records/{key}
 * **Method:** `GET` 
  
    **Required:**
@@ -32,7 +32,7 @@ docker-compose up -d
 * **Sample Call:**
 
 ```curl
-  curl --location --request GET 'http://localhost:3000/records/foo'
+  curl --location --request GET 'https://yemeksepeti-case.herokuapp.com/records/foo'
 ```
 
 
@@ -40,7 +40,7 @@ docker-compose up -d
 
 * **Description:** Saves a value with a key for storage
 * **URL**
-  http://localhost:3000/records
+  https://yemeksepeti-case.herokuapp.com/records
 * **Method:** `POST` 
  
    **Request Body:**
@@ -59,7 +59,7 @@ docker-compose up -d
 
 * **Sample Call:**
 ```curl
- curl --location --request GET 'http://localhost:3000/records/foo2' \
+ curl --location --request GET 'https://yemeksepeti-case.herokuapp.com/records/foo2' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "key":"foo",
@@ -72,7 +72,7 @@ docker-compose up -d
 
 * **Description:** Deletes all records
 * **URL**
-  http://localhost:3000/records
+  https://yemeksepeti-case.herokuapp.com/records
 * **Method:** `DELETE` 
 
 * **Success Response:**
@@ -81,7 +81,7 @@ docker-compose up -d
 * **Sample Call:**
 
 ```curl
-  curl --location --request DELETE 'http://localhost:3000/records'
+  curl --location --request DELETE 'https://yemeksepeti-case.herokuapp.com/records'
 ```
 
 <hr>
