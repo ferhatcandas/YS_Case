@@ -17,7 +17,7 @@ docker-compose up -d
 ## API  
 * **Description:** Gets a value stored before
 * **URL**
-  http://localhost:3000/records/`{key}`
+  http://localhost:3000/records/{key}
 * **Method:** `GET` 
  
    **Required:**
