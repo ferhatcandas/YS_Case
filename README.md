@@ -84,6 +84,23 @@ docker-compose up -d
   curl --location --request DELETE 'https://yemeksepeti-case.herokuapp.com/records'
 ```
 
+
+* **Description:** Deletes specific record
+* **URL**
+  https://yemeksepeti-case.herokuapp.com/records/{key}
+* **Method:** `DELETE` 
+  
+   **Required:**
+   `key`
+
+* **Success Response:**
+   * **Code:** 200 <br />  
+
+* **Sample Call:**
+
+```curl
+  curl --location --request DELETE 'https://yemeksepeti-case.herokuapp.com/records/foo'
+```
 <hr>
 
 
