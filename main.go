@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 	"storage-app/controllers"
 	"storage-app/data/cache"
 	"storage-app/models/logging"
@@ -12,6 +13,7 @@ import (
 
 func main() {
 
+	port := os.Getenv("PORT")
 	srv := server.NewServer()
 	cache := cache.NewCacheManager()
 	fileSvc := services.NewFileSaverService(cache, 5000, "/tmp/")
@@ -37,6 +39,6 @@ func main() {
 	srv.DELETE("/records/:key", storageController.Remove)
 	fileSvc.FillRecords()
 	go fileSvc.Worker()
-	srv.Run(":3000")
+	srv.Run(":" + port)
 
 }
