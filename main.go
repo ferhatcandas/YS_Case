@@ -36,7 +36,7 @@ func main() {
 	srv.DELETE("/records", storageController.Flush)
 	srv.DELETE("/records/:key", storageController.Remove)
 	fileSvc.FillRecords()
-	go fileSvc.Save()
+	go fileSvc.Worker()
 	srv.Run(":3000")
 
 }
