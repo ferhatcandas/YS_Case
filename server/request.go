@@ -16,7 +16,6 @@ type Request struct {
 }
 
 func NewRequest(path string, params map[int]string, r *http.Request) Request {
-	// params := getParams(path, r)
 	body, _ := ioutil.ReadAll(r.Body)
 	headers := make(map[string][]string)
 	for name, values := range r.Header {

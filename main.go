@@ -14,6 +14,9 @@ import (
 func main() {
 
 	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
 	srv := server.NewServer()
 	cache := cache.NewCacheManager()
 	fileSvc := services.NewFileSaverService(cache, 5000, "/tmp/")

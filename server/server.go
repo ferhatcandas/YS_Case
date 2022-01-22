@@ -49,7 +49,6 @@ func (s *Server) Run(port string) {
 		} else {
 			rw.WriteHeader(http.StatusNotFound)
 		}
-
 	})
 
 	err := http.ListenAndServe(port, s.mux)
